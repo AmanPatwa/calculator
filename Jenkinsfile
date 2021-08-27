@@ -1,5 +1,7 @@
 pipeline {
-    agent any;
+    agent {
+        node "jenkins-agent1"
+    }
     tools {
         nodejs 'nodejs-react'
     }
