@@ -8,6 +8,7 @@ pipeline {
         stage('Initialize') {
             steps {
                 sh '''
+                    echo 'Initializing.....'
                     npm install
                 '''
             }
@@ -16,6 +17,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
+                    echo 'Running test.....'
                     npm run test -- --watchAll=false
                 '''
             }
@@ -24,6 +26,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
+                    echo 'Building.....'
                     npm run build
                 '''
             }
