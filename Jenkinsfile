@@ -15,7 +15,7 @@ pipeline{
         stage("Test"){
             steps{
                 echo "========executing testing Stage========"
-                npm run test -- --watchAll=false
+                npm run test --watchAll=false
             }
         }
         stage("Build"){
