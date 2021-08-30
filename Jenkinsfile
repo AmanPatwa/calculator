@@ -37,11 +37,12 @@ pipeline{
                 echo "========executing build Stage========"  
                 '''
             }
-            options {
-                withAWS(region: 'us-east-1', role: 'PE-Training-2021'){
+            withAWS(region: 'us-east-1', role: 'PE-Training-2021'){
                     s3Upload(bucket:'22088-amanpatwa/temp1',includePathPattern:"build/*")
                 }
-            }
+//             options {
+                
+//             }
         }
 
 
